@@ -1,12 +1,64 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 body{
     font-family: 'Raleway';
     font-size: 14px;
     line-height: 1.2;
+    background: #fff;
 }
+/***GLOBAL**/
+
+section{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.section-wrap{
+    width: 90%;
+    margin: auto;
+}
+.section-title{
+    font-size: 34px;
+    font-weight: 800;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 40px;
+}
+.btn{
+    background: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #000;  
+    font-weight: 300;
+}
+.btn-2{
+    background: #92e0e0;
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 12px;
+    text-transform: capitalize;
+    color: #000;  
+    font-weight: 300;
+}
+.card-title{
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: capitalize;
+    text-align: center;
+    padding-bottom: 20px;
+}
+/***HEADER***/
+
 header {
     width: 100%;
     position: relative;
@@ -14,10 +66,12 @@ header {
 }
 .nav-bar{
     width: 100%;
-    height: 68px;
+    min-height: 68px;
     background-color: rgba(177, 227, 247, transparent);
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
     cursor: pointer;
     position: fixed;
     padding: 0;
@@ -26,15 +80,13 @@ header {
 }
 .logo{
     font-size: 30px;
-    margin-left: 5%; 
+    margin-left: 5%;
 }
 .open-slide{
-    position: absolute;
     font-size: 24px;
-    right: 5%;
+    margin-right: 5%;
     z-index: 30;
 }
-
 #slide-menu{
     position: fixed;
     width: 100%;
@@ -50,7 +102,6 @@ header {
     opacity: 0;
     z-index: 400;
 }
-
 #slide-menu .slide-menu-list a{
     text-decoration: none;
     font-size: 14px;
@@ -74,10 +125,7 @@ header {
     align-content: center;
     align-items: center;
 }
-#slide-menu .logo{
-    margin:0 auto;
-    cursor: pointer;
-}
+
 #slide-menu .slide-menu-list .icon li{
     list-style: none;
 }
@@ -95,13 +143,14 @@ header {
     color: #000;
 }
 
+
 /** SHOWCASE **/
 #showcase{
     background-image: url('showcase.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 700px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -126,64 +175,35 @@ header {
     font-weight: 800;
     text-transform: capitalize;
     padding-bottom: 40px;
-   
-}
-#showcase .showcase-wrap a{
-    background: #fff;
-    text-decoration: none;
-    border-radius: 50px;
-    padding: 15px 30px;
-    font-size: 12px;
-    text-transform: capitalize;
-    color: #000;
-    
 }
 #showcase .showcase-wrap a:hover{
-    background: rgba(255, 255, 255, 0.5);
-    
+    background: rgba(255, 255, 255, 0.5);   
 }
 
 /**SECTION-1 **/
-.section-1{
-    width: 100%;
-    height: 70vh;
+#section-1{
+    min-height: 400px;
     background-color: rgba(255, 255, 255, 0.1);
-    overflow: hidden;
+}
+#section-1 .section-wrap{   
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    overflow: hidden;
-}
-.section-wrap  {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-
-}
-.section-title{
-    font-size: 34px;
-    font-weight: 800;
-    text-transform: capitalize;
 }
 .section-content{
     width: 80%;
     font-size: 16px;
-    padding: 40px 50px;
     text-align: center;
     line-height: 1.8;
 }
 /***SECTION-2***/
-.section-2{
+#section-2{
     width: 100%;
-    height: 20vh;
-    background-color:  #8bafaf;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    min-height: 100px;
+    background-color:  #8bafaf;  
+    text-align: center; 
 }
 .section-description{
     font-size: 4vw;
@@ -191,205 +211,197 @@ header {
     color: #fff;
 }
 /***SECTION-3***/
-.section-3{
+#section-3{
     width: 100%;
-    height: 800px;
+    min-height: 600px;
     overflow: hidden;
     position: relative;
-    display: flex;
 }
-.card-list{
-    width: 80%;
+#section-3 .section-wrap{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
-.section-3 .card{
+#section-3 .card-list{
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center
+}
+#section-3 .card{
     width: 30%;
-    height: 400px;
+    min-height: 400px;
+    background: #92e0e0;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    background: #92e0e0;
     text-align: center;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
     box-shadow: 1px 5px 19px #8bafaf;
 }
-.section-3 .card:hover{
+#section-3 .card:hover{
     background: rgba(146, 224, 224, 0.5);
     box-shadow: 3px 10px 30px #8bafaf;
     opacity: 0.7;
 }
-.section-3  .card-list .card img{
-    width: 100%;
+#section-3 img{
     height: 200px;
-    margin-top: -30%; 
+    margin-top: -30%;
 }
-.section-3 .card .card-title{
-    display: flex;
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 20px 20px 30px 20px;
+#section-3 .card-title{
+    padding-top: 20px;
 }
-.section-3 .card .card-description{
-    padding: 1% 3%;
-    display: flex;
+#section-3 .card-description{
+    padding: 0 20px;
 }
 /***SECTION-4***/
-.section-4 {
+#section-4 {
     width: 100%;
-    height: 700px;
+    min-height: 600px;
     background: rgba(0,0,0,.1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     position: relative;
     overflow: hidden;
 }
-.section-4 .section-wrap{
+#section-4 .section-wrap{
     width: 100%;
-    height: 700px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-content: center;
     align-items: center;
 }
-.section-4 .section-gallery{
+#section-4 .section-gallery{
     display: flex;
     width: 80%;
     flex-wrap: wrap;
-    margin-top: 40px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
 }
-.section-4 .section-gallery img{
-    width: 18vw;
-    height: 200px;
-    padding: 5px;
+#section-4 .section-gallery img{
+    width: 19vw;
+    height: 28vh;
+    padding: 5px 0;
 }
-.section-4 .section-gallery img:hover{
+#section-4 .section-gallery img:hover{
     transform: scale(0.9, 0.9);
     transition: .5s;
     opacity: .8;
 }
 /**SECTION-5**/
-.section-5{
+#section-5{
     width: 100%;
-    height: 30vh;
+    min-height: 180px;
     background:#8bafaf;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-    position: relative;
 }
 .container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: center;
 }
-.section-5 .container p{
+#section-5 .container p{
     color: #fff;
     font-weight: 500;
     font-size: 18px;
 }
-.section-5 .hire{
+#section-5 .hire{
     padding-right: 50px;
 }
-.section-5 .btn{
-    background: #fff;
-    border-radius: 50px;
-    padding: 15px 40px;
-    font-weight: 500;
-    font-size: 12px;
-    text-transform: capitalize;
-    cursor: pointer;
-}
-.section-5 .btn:hover{
+
+#section-5 .btn:hover{
     opacity: .8;
 }
 /***SECTION-6***/
-.section-6{ 
+#section-6{ 
     width: 100%;
-    height: 600px;
+    min-height: 600px;
     background: #e3e3e3;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
     overflow: hidden;
 }
-.section-6 .section-wrap{
+#section-6 .section-wrap{
     width: 100%;
-    height: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    flex-direction: column;
 }
-.section-6 .card-list{
+#section-6 .card-list{
     display: flex;
     width: 90%;
     justify-content: center;
     flex-direction: row;
 }
-.section-6 .card{
+#section-6 .card{
     width: 20%;
     position: relative;
-    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 20px;
 }
-.card-number{
-    font-size: 60px;
+#section-6 .card-number{
+    position: absolute;
+    top: -23px;
+    left:0;
+    font-size: 80px;
     color: #92e0e0;
     font-weight: 800;
+    align-items: left;
 }
-.section-6 h2{
-    position: absolute;
-    top: 30px;
-    left: 20px;
+#section-6 h2{
     text-transform: uppercase;
     font-size: 16px;
+    margin: 20px 0;
+    z-index: 2;
 }
-.section-6 p{
+#section-6 p{
     padding: 20px;
-    text-align: left;
+    text-align: center;
     margin-bottom: 30px;
 }
-.section-6 a{
+#section-6 a{
     background: #92e0e0;
     text-decoration: none;
     color: #000;
     padding: 15px 30px;
     border-radius: 50px;
     font-size: 12px;
+    text-align: center;
 }
-.section-6 .btn-2:hover{
+#section-6 .btn-2:hover{
     opacity: 0.7;
 }
 /***SECTION-7***/
-.section-7{
+#section-7{
     width: 100%;
-    height: 600px;
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
+    min-height: 600px;
     overflow: hidden;
 }
-.section-7 .section-wrap{
+#section-7 .section-wrap{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.section-7 iframe{
+#section-7 iframe{
+    overflow: hidden;
     width: 100%;
     height: 400px;
-    padding-top: 40px;
 }
 /**FOOTER**/
 footer{
     width: 100%;
-    height: 160px;
+    min-height: 160px;
     background: rgba(139, 175, 175, 0.8);
     display: flex;
     justify-content: center;
@@ -398,10 +410,13 @@ footer{
 }
 footer .section-wrap{
     width: 80%;
-    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
 }
 footer .logo{
-    margin-left:-5%;
+    margin-left: -5%;
 }
 footer .footer-trademark{
     text-align: center;
@@ -430,99 +445,106 @@ footer .social-media-list i:hover{
     75%{transform: translate(0, -20px);}
     100%{transform: translate(0, 0);}
 }
-@media (max-width: 800px){
-    .section-3{
-        width: 100%;
-        height: 240vh;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
+
+@media (max-width: 769px){
+    #section-1 .section-wrap{
+        margin: 20px 0;
     }
-    .section-3 .section-wrap{
-        width: 100%;
-        height: 240vh;
+    #section-3{  
+        min-height: 800px;
+    }
+    #section-3 .card-list{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        align-content: center;
     }
-    .section-3 .section-title{
-        padding: 40px 0;
+    #section-3 .card{
+        width: 100%;
+        min-height: 200px;
+        margin: 10px 0;
+        position: relative;
     }
-    .section-3 .card-list{
+    #section-3 .card img{
+        width: 40%;
+        position: absolute;
+        top:0;
+        left:0;
+        margin: 0;
+        padding: 0;
+    }
+    #section-3 .card h2, #section-3 .card p{
+        width: 60%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    #section-3 .card p{
+        margin-top: 20%;
+    }
+    #section-4 {
+        min-height: 880px;
+    }
+    #section-4 .section-gallery{
         display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
         justify-content: center;
     }
-    .section-3 .card{
-        height: 50vh;
-        width: 80%;
+    #section-4 .section-gallery img{
+        width: 200px;
+        height: 150px;
+        margin: 0 10px;
+    }
+    #section-5 .container{
         display: flex;
-        margin: 40px      
-    }
-    .section-4{
-        width: 100%;
-        height: 200vh;
-        display: flex;
-    }
-    .section-4 .section-gallery img{
-        width: 35vw;
-        height: 200px;
-        padding: 5px;
-    }
-    .section-5 {
-        width: 100%;
-    }
-    .section-5 .section-wrap{
-        margin: 0 5%;
-    }
-    .section-6 {
-        width: 100%;
-        height: 140vh;
-        display: flex;
+        flex-direction: column;
+        text-align: center;
         justify-content: center;
-        align-content: center;
         align-items: center;
+        margin: 0;
     }
-    .section-6 .section-wrap .section-title{
+    #section-5 .hire{
+        margin: 0;
+        padding: 0;
+    }
+    #section-5 .btn{
+        margin-top: 10px;
+    }
+    #section-6{
+        min-height: 800px;
+    }
+    #section-6 .section-wrap{
+        margin: 20px;
+    }
+    #section-6 .card-list{
+        display: flex;
+        flex-direction: column;
+    }
+    #section-6 .card{
+        width: 100%;
+        min-height: 200px;
+        margin: 20px 0;
+        border-bottom: 1px solid rgba(0,0,0, .3)
+    }
+    #section-6 .card-number{
+        width: 100%;
         text-align: center;
     }
-    .section-6 .section-wrap{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        height: 140vh;
+    #section-6 .card-title{
+        position: absolute;
+        top: 0;
     }
-    .section-6 .section-wrap .card{
-        width: 40%;
-    }
-    .section-6 .section-wrap p{
-        font-size: 12px;
-    }
-}
-@media (max-width: 600px){
-    .section-4 .section-gallery img{
-        width: 35vw;
-    }
-    .section-5 .section-wrap .btn{
-        padding: 10px 15px;
-    }
-    .section-6 {
-        height: 200vh;
-    }
-    .section-6 .section-wrap .card{
+    #section-6 .card-description{
         width: 60%;
+        position: absolute;
+        left: 0;
+        margin-top:10px;
     }
-    .section-6 .section-wrap .card-description{
-        font-size: 12px;
-        padding: 15px 0;
-        margin-bottom: 10px;
-    }
-    .section-6 .section-wrap .btn-2{
-        padding: 10px 15px;
-        margin-bottom: 20px;
+    #section-6 .btn-2{
+        width: 30%;
+        position: absolute;
+        right: 0;
+        margin-top: 10px;
     }
     footer .section-wrap{
         display: flex;
@@ -547,5 +569,17 @@ footer .social-media-list i:hover{
     footer .section-wrap .footer-trademark{
         order: 3;
         font-size: 10px;
+    }
+}
+@media (max-width: 400px){
+    #section-1 p{
+        font-size: 12px;
+    }
+    #section-3 p, #section-6 p {
+        font-size: 10px;
+    }
+    #section-6 a{
+        font-size: 10px;
+        padding: 10px 10px;
     }
 }
